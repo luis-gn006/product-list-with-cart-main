@@ -1,0 +1,24 @@
+.add-to-cart {
+  position: relative;
+  top: -23px;
+  left: 30%;
+  background-color: #fff;
+  border-radius: 25px;
+  border: solid, 1px #b59684;
+  width: 125px;
+  height: 38px;
+}
+.add-to-cart__container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  position: relative;
+  left: 8%;
+}
+.add-to-cart__image {
+  width: 18px;
+}
+.add-to-cart__paragraph {
+  font-weight: 600;
+  font-size: 12px;
+}

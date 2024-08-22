@@ -1,0 +1,8 @@
+.footer {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 50px;
+}
+.footer__link {
+  color: hsl(228, 45%, 44%);
+}
