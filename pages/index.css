@@ -1,7 +1,9 @@
+@import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
 @import url(../blocks/page.css);
 @import url(../blocks/header.css);
 @import url(../blocks/products.css);
 @import url(../blocks/product.css);
 @import url(../blocks/add-to-cart.css);
+@import url(../blocks/your-cart.css);
 @import url(../blocks/footer.css);

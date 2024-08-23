@@ -1,0 +1,22 @@
+.your-cart {
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+}
+.your-cart__heading {
+  color: hsl(14, 86%, 42%);
+  align-self: flex-start;
+}
+.your-cart__image {
+  margin-top: 10px;
+  width: 58%;
+}
+.your-cart__paragraph {
+  color: #8d7875;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+}
