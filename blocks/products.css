@@ -1,0 +1,21 @@
+.producst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+@media only screen and (min-width: 1000px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 570px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+    width: 840px;
+  }
+}

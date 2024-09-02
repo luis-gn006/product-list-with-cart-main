@@ -4,9 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 10%;
+  padding: 0;
+  width: 272px;
+  margin: 0 auto;
 }
 .your-cart__heading {
+  padding: 0 0 0 20px;
   color: hsl(14, 86%, 42%);
   align-self: flex-start;
 }
@@ -19,4 +22,20 @@
   text-align: center;
   font-weight: 500;
   font-size: 12px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .your-cart {
+    position: fixed;
+    top: 100px;
+    right: 51px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .your-cart {
+    position: relative;
+    top: -883px;
+    left: 390px;
+  }
 }

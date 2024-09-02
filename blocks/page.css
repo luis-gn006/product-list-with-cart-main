@@ -4,4 +4,9 @@
   background-color: #fcf8f5;
   margin: 0;
   padding: 0 5%;
+  max-width: 1280px;
+}
+
+body {
+  background-color: #fcf8f5;
 }

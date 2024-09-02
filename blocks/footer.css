@@ -1,8 +1,13 @@
 .footer {
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
-  padding-top: 50px;
+  padding: 50px 0 20px;
 }
 .footer__link {
   color: hsl(228, 45%, 44%);
+}
+
+.footer__link:hover {
+  opacity: 0.3;
+  transition: 500ms;
 }
