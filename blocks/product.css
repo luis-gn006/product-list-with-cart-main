@@ -9,6 +9,9 @@
 .product__image {
   border-radius: 8px;
 }
+.product__image-addedToCart {
+  border: 2px solid hsl(14, 86%, 42%);
+}
 .product__title {
   font-size: 12px;
   font-weight: 600;

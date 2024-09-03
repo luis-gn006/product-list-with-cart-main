@@ -40,6 +40,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Waffle</h3>
           <p class="product__description">Waffle with Berries</p>
           <p class="product__price">$6.50</p>
@@ -61,6 +66,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Crème Brûlée</h3>
           <p class="product__description">Vanilla Bean Crème Brûlée</p>
           <p class="product__price">$7.00</p>
@@ -82,6 +92,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Macaron</h3>
           <p class="product__description">Macaron Mix of Five</p>
           <p class="product__price">$8.00</p>
@@ -103,6 +118,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Tiramisu</h3>
           <p class="product__description">Classic Tiramisu</p>
           <p class="product__price">$5.50</p>
@@ -124,6 +144,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Baklava</h3>
           <p class="product__description">Pistachio Baklava</p>
           <p class="product__price">$4.00</p>
@@ -145,6 +170,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Pie</h3>
           <p class="product__description">Lemon Meringue Pie</p>
           <p class="product__price">$5.00</p>
@@ -166,6 +196,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Cake</h3>
           <p class="product__description">Red Velvet Cake</p>
           <p class="product__price">$4.50</p>
@@ -187,6 +222,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Brownie</h3>
           <p class="product__description">Salted Caramel Brownie</p>
           <p class="product__price">$5.50</p>
@@ -208,6 +248,11 @@
               <p class="add-to-cart__paragraph">Add to Cart</p>
             </div>
           </button>
+          <div class="add-to-cart__counter add-to-cart__counter-inactive">
+            <button class="add-to-cart__decrement"></button>
+            <p class="add-to-cart__quantity">1</p>
+            <button class="add-to-cart__increment"></button>
+          </div>
           <h3 class="product__title">Panna Cotta</h3>
           <p class="product__description">Vanilla Panna Cotta</p>
           <p class="product__price">$6.50</p>
@@ -215,14 +260,56 @@
       </section>
       <section class="your-cart">
         <h3 class="your-cart__heading">Your Cart (0)</h3>
-
-        <img
-          src="./images/illustration-empty-cart.svg"
-          alt=""
-          class="your-cart__image"
-        />
-        <p class="your-cart__paragraph">Your added items will appear here</p>
+        <div class="your-cart__selected your-cart__selected-inactive">
+          <div class="your-cart__total">
+            <p class="your-cart__total-heading">Order Total</p>
+            <p class="your-cart__total-price">$</p>
+          </div>
+          <div class="your-cart__message">
+            <img
+              class="your-cart__message-image"
+              src="./images/icon-carbon-neutral.svg"
+              alt="image neutral carbon delivery"
+            />
+            <p class="your-cart__text">
+              This is a
+              <span class="your-cart__text-bold">carbon-neutral</span>
+              delivery
+            </p>
+          </div>
+          <button class="your-cart__button-confirm">Confirm Order</button>
+        </div>
+        <div class="your-cart__empty">
+          <img
+            src="./images/illustration-empty-cart.svg"
+            alt=""
+            class="your-cart__image"
+          />
+          <p class="your-cart__paragraph">Your added items will appear here</p>
+        </div>
       </section>
+
+      <section class="popup">
+        <div class="popup__container">
+          <img
+            class="popup__image-confirmed"
+            src="./images/icon-order-confirmed.svg"
+            alt="image confirmed order"
+          />
+          <h2 class="popup__heading">Order Confirmed</h2>
+          <p class="popup__paragraph">We hope you enjoy your food!</p>
+          <div class="popup__order-total">
+            <div class="popup__order-total-text">
+              <p class="popup__order-total-heading">Order Total</p>
+              <p class="popup__order-total-price">$</p>
+            </div>
+          </div>
+          <button type="submit" class="popup__form-button" value="delete">
+            Start New Order
+          </button>
+        </div>
+      </section>
+
       <footer class="footer">
         Challenge by
         <a
@@ -256,6 +343,31 @@
         </div>
       </div>
     </template>
+
+    <template class="confirmCart__template">
+      <div class="confirmCart">
+        <div class="confirmCart__left-column">
+          <img
+            class="confirmCart__image"
+            src="./images/image-baklava-mobile.jpg"
+            alt=""
+          />
+        </div>
+        <div class="confirmCart__center-column">
+          <div class="confirmCart__heading">
+            <h3 class="confirmCart__title"></h3>
+          </div>
+          <div class="confirmCart__specs">
+            <p class="confirmCart__quantity"></p>
+            <p class="confirmCart__price">@ $</p>
+          </div>
+        </div>
+        <div class="confirmCart__right-column">
+          <p class="confirmCart__total-price">$</p>
+        </div>
+      </div>
+    </template>
+
     <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>

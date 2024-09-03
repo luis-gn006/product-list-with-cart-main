@@ -1,0 +1,37 @@
+.confirmCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.confirmCart__center-column {
+  display: flex;
+  flex-direction: column;
+  width: 122px;
+}
+.confirmCart__specs {
+  display: flex;
+  gap: 20px;
+}
+.confirmCart__image {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.confirmCart__title {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+.confirmCart__quantity {
+  margin: 0;
+  color: hsl(14, 86%, 42%);
+}
+
+.confirmCart__price {
+  margin: 0;
+  color: #938884;
+}
+.confirmCart__total-price {
+  font-weight: bold;
+  font-size: 16px;
+}
