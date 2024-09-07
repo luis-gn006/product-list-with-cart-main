@@ -8,6 +8,7 @@
 }
 .product__image {
   border-radius: 8px;
+  border: 2px solid hsla(0, 0%, 100%, 0);
 }
 .product__image-addedToCart {
   border: 2px solid hsl(14, 86%, 42%);

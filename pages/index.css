@@ -2,6 +2,7 @@
 @import url(../vendor/fonts.css);
 @import url(../blocks/page.css);
 @import url(../blocks/header.css);
+@import url(../blocks/main.css);
 @import url(../blocks/products.css);
 @import url(../blocks/product.css);
 @import url(../blocks/add-to-cart.css);

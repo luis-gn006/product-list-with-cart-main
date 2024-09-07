@@ -7,6 +7,11 @@
   border: solid, 1px #b59684;
   width: 125px;
   height: 38px;
+  z-index: 5;
+}
+.add-to-cart:hover {
+  background-color: #eee;
+  cursor: pointer;
 }
 .add-to-cart__inactive {
   display: none;

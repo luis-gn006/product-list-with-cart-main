@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0;
+  width: 108px;
 }
 .addedCart__price,
 .addedCart__quantity,
@@ -23,6 +24,9 @@
 .addedCart__quantity {
   color: hsl(14, 86%, 42%);
   font-weight: bold;
+}
+.addedCart__image {
+  display: none;
 }
 .addedCart__right-column {
   display: flex;
@@ -36,4 +40,9 @@
   height: 20px;
   border: 2px solid #938884;
   background: url("../images/icon-remove-item.svg") no-repeat center;
+}
+.addedCart__remove:hover {
+  border: 2px solid hsl(14, 86%, 42%);
+  opacity: 0.7;
+  cursor: pointer;
 }
