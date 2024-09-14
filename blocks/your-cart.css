@@ -73,6 +73,10 @@
   padding: 13px 0;
   width: 100%;
 }
+.your-cart__button-confirm:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
 .your-cart__image {
   margin-top: 10px;
   width: 58%;

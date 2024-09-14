@@ -1,4 +1,4 @@
-export class AddYourCart {
+class AddYourCart {
   constructor(heading, price, image, templateSelector) {
     this._heading = heading;
     this._price = price;
@@ -27,3 +27,5 @@ export class AddYourCart {
     return this._element;
   }
 }
+
+export default AddYourCart;
