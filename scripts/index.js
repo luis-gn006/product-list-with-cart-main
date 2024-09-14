@@ -1,6 +1,5 @@
 import { AddYourCart } from "./AddYourCart.js";
 let counter = 0;
-let totalPrice = 0;
 
 const waffle = document.querySelector(".product-waffle");
 const waffleButton = waffle.querySelector(".add-to-cart");
@@ -63,6 +62,18 @@ const emptyCart = document.querySelector(".your-cart__empty");
 const selectedCart = document.querySelector(".your-cart__selected");
 const yourCartTotalPrice = document.querySelector(".your-cart__total-price");
 
+function totalCart() {
+  let totalPrice = [];
+  const allAddedCart = document.querySelectorAll(".addedCart__total-price");
+  allAddedCart.forEach((product) => {
+    let priceWitout$ = product.textContent.replace("$", "");
+    let priceNumber = Number(priceWitout$);
+    totalPrice.push(priceNumber);
+    let totalPriceSum = totalPrice.reduce((a, b) => a + b, 0);
+    yourCartTotalPrice.textContent = `$${totalPriceSum}`;
+  });
+}
+
 function setItemRemoveButton() {
   const removeButtons = document.querySelectorAll(".addedCart__remove");
   removeButtons.forEach((btn) =>
@@ -77,6 +88,7 @@ function setItemRemoveButton() {
       removeCart(cardButton);
       container.remove();
       getEmptyCart();
+      totalCart();
     })
   );
 }
@@ -108,15 +120,11 @@ function setItemAddCartButton() {
       const productItem = ProductToCart.generateCard();
       yourCartProducts.append(productItem);
       setItemRemoveButton();
+      totalCart();
     })
   );
 }
 setItemAddCartButton();
-
-function calculateTotalPrice() {
-  const priceProduct = document.querySelectorAll(".addedCart__total-price");
-  console.log(priceProduct.textContent);
-}
 
 function removeCart(button) {
   button.classList.remove("add-to-cart__inactive");
@@ -137,6 +145,7 @@ function decrement(counterProduct, card) {
   cardQuantity.textContent = `${decreseCounterProduct}x`;
   const decrementTotalPrice = decreseCounterProduct * parseFloat(newCardPrice);
   cardTotal.textContent = `$${decrementTotalPrice}`;
+  totalCart();
 }
 function increment(counterProduct, card) {
   counter = counter + 1;
@@ -151,7 +160,7 @@ function increment(counterProduct, card) {
   cardQuantity.textContent = `${increaseCounterProduct}x`;
   const incrementTotalPrice = increaseCounterProduct * parseFloat(newCardPrice);
   cardTotal.textContent = `$${incrementTotalPrice}`;
-  calculateTotalPrice();
+  totalCart();
 }
 
 waffleIncrement.addEventListener("click", function () {
