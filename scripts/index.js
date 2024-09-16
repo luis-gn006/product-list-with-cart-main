@@ -1,4 +1,5 @@
 import AddYourCart from "./AddYourCart.js";
+import AddConfirmCart from "./AddConfirmCart.js";
 import {
   waffle,
   waffleButton,
@@ -57,8 +58,10 @@ let counter = 0;
 
 function totalCart() {
   let totalPrice = [];
-  const allAddedCart = document.querySelectorAll(".addedCart__total-price");
-  allAddedCart.forEach((product) => {
+  const allAddedCartTotalPrice = document.querySelectorAll(
+    ".addedCart__total-price"
+  );
+  allAddedCartTotalPrice.forEach((product) => {
     let priceWitout$ = product.textContent.replace("$", "");
     let priceNumber = Number(priceWitout$);
     totalPrice.push(priceNumber);
@@ -287,10 +290,13 @@ confirmOrderButton.addEventListener("click", function () {
   document.addEventListener("click", (evt) => {
     clickOutClosePopup(evt);
   });
+  const allAddedCart = document.querySelectorAll(".addedCart");
+  console.log(allAddedCart);
 });
 
 function closePopup() {
   document.querySelector(".popup").classList.remove("popup__open");
+  document.removeEventListener("click", (evt) => {});
 }
 
 function escClose(evt) {
@@ -303,9 +309,6 @@ function clickOutClosePopup(evt) {
   if (evt.target.classList.contains("popup")) {
     closePopup();
   }
-  document.removeEventListener("click", (evt) => {
-    clickOutClosePopup(evt);
-  });
 }
 
 startNewOrderButton.addEventListener("click", function () {
