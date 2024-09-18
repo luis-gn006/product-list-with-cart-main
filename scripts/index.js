@@ -67,6 +67,7 @@ function totalCart() {
     totalPrice.push(priceNumber);
     let totalPriceSum = totalPrice.reduce((a, b) => a + b, 0);
     yourCartTotalPrice.textContent = `$${totalPriceSum}`;
+    popupOrderTotal.textContent = `$${totalPriceSum}`;
   });
 }
 
@@ -282,7 +283,7 @@ pannaDecrement.addEventListener("click", function () {
     getEmptyCart();
   }
 });
-
+const popupOrderTotal = document.querySelector(".popup__order-total-price");
 //Popup
 confirmOrderButton.addEventListener("click", function () {
   document.querySelector(".popup").classList.add("popup__open");
@@ -290,13 +291,29 @@ confirmOrderButton.addEventListener("click", function () {
   document.addEventListener("click", (evt) => {
     clickOutClosePopup(evt);
   });
+
   const allAddedCart = document.querySelectorAll(".addedCart");
-  console.log(allAddedCart);
+  const arrayAllAddedCart = Array.from(allAddedCart);
+  arrayAllAddedCart.forEach((product) => {
+    const newProduct = new AddConfirmCart(
+      product.querySelector(".addedCart__heading").textContent,
+      product.querySelector(".addedCart__total-price").textContent,
+      product.querySelector(".addedCart__price").textContent,
+      product.querySelector(".addedCart__image").src,
+      ".confirmCart__template",
+      product.querySelector(".addedCart__quantity").textContent
+    );
+    const producConfirmItem = newProduct.generateCard();
+    popupConfirmedProducts.prepend(producConfirmItem);
+  });
 });
+
+const popupConfirmedProducts = document.querySelector(".popup__order-products");
 
 function closePopup() {
   document.querySelector(".popup").classList.remove("popup__open");
   document.removeEventListener("click", (evt) => {});
+  popupConfirmedProducts.innerHTML = "";
 }
 
 function escClose(evt) {
@@ -313,6 +330,29 @@ function clickOutClosePopup(evt) {
 
 startNewOrderButton.addEventListener("click", function () {
   closePopup();
+  emptyCart.classList.remove("your-cart__empty-inactive");
+  selectedCart.classList.add("your-cart__selected-inactive");
+  removeCart(waffleButton);
+  removeCart(cremeButton);
+  removeCart(macaronButton);
+  removeCart(tiramisuButton);
+  removeCart(baklavaButton);
+  removeCart(meringueButton);
+  removeCart(cakeButton);
+  removeCart(brownieButton);
+  removeCart(pannaButton);
+  const yourCart = document.querySelector(".your-cart__products");
+  yourCart.innerHTML = "";
+  yourCart.previousElementSibling.textContent = "Your Cart (0)";
+  waffleCounter.textContent = "0";
+  cremeCounter.textContent = "0";
+  macaronCounter.textContent = "0";
+  tiramisuCounter.textContent = "0";
+  baklavaCounter.textContent = "0";
+  meringueCounter.textContent = "0";
+  cakeCounter.textContent = "0";
+  brownieCounter.textContent = "0";
+  pannaCounter.textContent = "0";
 });
 
 export {

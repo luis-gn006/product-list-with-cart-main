@@ -1,10 +1,11 @@
 class AddConfirmCart {
-  constructor(heading, price, totalPrice, image, templateSelector) {
+  constructor(heading, price, totalPrice, image, templateSelector, quantity) {
     this._heading = heading;
     this._price = price;
     this._totalPrice = totalPrice;
     this._image = image;
     this._templateSelector = templateSelector;
+    this._quantity = quantity;
   }
   _getTemplate() {
     const cartElement = document
@@ -25,8 +26,11 @@ class AddConfirmCart {
       this._heading;
     this._element.querySelector(".confirmCart__total-price").textContent =
       this._price;
-    this._element.querySelector(".confirmCart__price").textContent =
-      this._totalPrice;
+    this._element.querySelector(
+      ".confirmCart__price"
+    ).textContent = `@${this._totalPrice}`;
+    this._element.querySelector(".confirmCart__quantity").textContent =
+      this._quantity;
 
     return this._element;
   }

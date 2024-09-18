@@ -46,7 +46,7 @@
 .popup__order-total-text {
   margin: 20px 0 0 0;
   display: flex;
-  justify-content: space-between;
+  gap: 224px;
 }
 .popup__order-total-heading {
   font-size: 14px;
