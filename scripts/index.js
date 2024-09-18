@@ -66,8 +66,8 @@ function totalCart() {
     let priceNumber = Number(priceWitout$);
     totalPrice.push(priceNumber);
     let totalPriceSum = totalPrice.reduce((a, b) => a + b, 0);
-    yourCartTotalPrice.textContent = `$${totalPriceSum}`;
-    popupOrderTotal.textContent = `$${totalPriceSum}`;
+    yourCartTotalPrice.textContent = `$${totalPriceSum.toFixed(2)}`;
+    popupOrderTotal.textContent = `$${totalPriceSum.toFixed(2)}`;
   });
 }
 
@@ -141,7 +141,7 @@ function decrement(counterProduct, card) {
   const cardTotal = cardSelector.querySelector(".addedCart__total-price");
   cardQuantity.textContent = `${decreseCounterProduct}x`;
   const decrementTotalPrice = decreseCounterProduct * parseFloat(newCardPrice);
-  cardTotal.textContent = `$${decrementTotalPrice}`;
+  cardTotal.textContent = `$${decrementTotalPrice.toFixed(2)}`;
   totalCart();
 }
 function increment(counterProduct, card) {
@@ -156,7 +156,7 @@ function increment(counterProduct, card) {
   const cardTotal = cardSelector.querySelector(".addedCart__total-price");
   cardQuantity.textContent = `${increaseCounterProduct}x`;
   const incrementTotalPrice = increaseCounterProduct * parseFloat(newCardPrice);
-  cardTotal.textContent = `$${incrementTotalPrice}`;
+  cardTotal.textContent = `$${incrementTotalPrice.toFixed(2)}`;
   totalCart();
 }
 
