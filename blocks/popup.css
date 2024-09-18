@@ -42,11 +42,13 @@
   padding: 20px 10px;
   width: 240px;
   border-radius: 5px;
+  overflow: scroll;
+  height: 200px;
 }
 .popup__order-total-text {
   margin: 20px 0 0 0;
   display: flex;
-  gap: 224px;
+  gap: 100px;
 }
 .popup__order-total-heading {
   font-size: 14px;
@@ -83,6 +85,9 @@
   .popup__paragraph {
     font-size: 18px;
     margin: 0 0 25px 0;
+  }
+  .popup__order-total-text {
+    gap: 224px;
   }
   .popup__order-total {
     background-color: #fcf8f5;

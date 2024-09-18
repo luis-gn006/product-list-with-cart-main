@@ -1,6 +1,6 @@
 .confirmCart {
   display: flex;
-  gap: 60px;
+  gap: 5px;
   align-items: center;
 }
 .confirmCart__center-column {
@@ -26,6 +26,7 @@
 .confirmCart__quantity {
   margin: 0;
   color: hsl(14, 86%, 42%);
+  font-weight: 600;
 }
 
 .confirmCart__price {
@@ -35,4 +36,10 @@
 .confirmCart__total-price {
   font-weight: bold;
   font-size: 16px;
+}
+
+@media only screen and (min-width: 800px) {
+  .confirmCart {
+    gap: 60px;
+  }
 }

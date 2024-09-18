@@ -61,6 +61,8 @@ const yourCartTotalPrice = document.querySelector(".your-cart__total-price");
 
 const confirmOrderButton = document.querySelector(".your-cart__button-confirm");
 const startNewOrderButton = document.querySelector(".popup__form-button");
+const popupOrderTotal = document.querySelector(".popup__order-total-price");
+const popupConfirmedProducts = document.querySelector(".popup__order-products");
 
 export {
   waffle,
@@ -115,4 +117,6 @@ export {
   yourCartTotalPrice,
   confirmOrderButton,
   startNewOrderButton,
+  popupOrderTotal,
+  popupConfirmedProducts,
 };
