@@ -239,16 +239,16 @@ setupCounter(
   "#Panna",
   pannaButton
 );
-
+//Event listeners for Popup
+document.addEventListener("click", (evt) => {
+  if (evt.target.classList.contains("popup")) {
+    closePopup();
+  }
+});
+document.addEventListener("keydown", escClose);
 //Popup confirm order
 confirmOrderButton.addEventListener("click", function () {
   document.querySelector(".popup").classList.add("popup__open");
-  document.addEventListener("keydown", escClose);
-  document.addEventListener("click", (evt) => {
-    if (evt.target.classList.contains("popup")) {
-      closePopup();
-    }
-  });
 
   const allAddedCart = document.querySelectorAll(".addedCart");
   const arrayAllAddedCart = Array.from(allAddedCart);
