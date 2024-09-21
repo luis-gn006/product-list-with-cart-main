@@ -1,42 +1,7 @@
 import AddYourCart from "./AddYourCart.js";
 import AddConfirmCart from "./AddConfirmCart.js";
 import {
-  waffleButton,
-  waffleDecrement,
-  waffleCounter,
-  waffleIncrement,
-  cremeButton,
-  cremeDecrement,
-  cremeCounter,
-  cremeIncrement,
-  macaronButton,
-  macaronDecrement,
-  macaronCounter,
-  macaronIncrement,
-  tiramisuButton,
-  tiramisuDecrement,
-  tiramisuCounter,
-  tiramisuIncrement,
-  baklavaButton,
-  baklavaDecrement,
-  baklavaCounter,
-  baklavaIncrement,
-  meringueButton,
-  meringueDecrement,
-  meringueCounter,
-  meringueIncrement,
-  cakeButton,
-  cakeDecrement,
-  cakeCounter,
-  cakeIncrement,
-  brownieButton,
-  brownieDecrement,
-  brownieCounter,
-  brownieIncrement,
-  pannaButton,
-  pannaDecrement,
-  pannaCounter,
-  pannaIncrement,
+  productElements,
   yourCartProducts,
   yourCartCounter,
   emptyCart,
@@ -46,6 +11,7 @@ import {
   startNewOrderButton,
   popupOrderTotal,
   popupConfirmedProducts,
+  productIds,
 } from "./constants.js";
 
 let counter = 0;
@@ -181,64 +147,16 @@ function setupCounter(
     }
   });
 }
+productElements.forEach((product, index) => {
+  setupCounter(
+    product.increment,
+    product.decrement,
+    product.counter,
+    productIds[index],
+    product.button
+  );
+});
 
-setupCounter(
-  waffleIncrement,
-  waffleDecrement,
-  waffleCounter,
-  "#Waffle",
-  waffleButton
-);
-setupCounter(
-  cremeIncrement,
-  cremeDecrement,
-  cremeCounter,
-  "#Creme",
-  cremeButton
-);
-setupCounter(
-  macaronIncrement,
-  macaronDecrement,
-  macaronCounter,
-  "#Macaron",
-  macaronButton
-);
-setupCounter(
-  tiramisuIncrement,
-  tiramisuDecrement,
-  tiramisuCounter,
-  "#Tiramisu",
-  tiramisuButton
-);
-setupCounter(
-  baklavaIncrement,
-  baklavaDecrement,
-  baklavaCounter,
-  "#Baklava",
-  baklavaButton
-);
-setupCounter(
-  meringueIncrement,
-  meringueDecrement,
-  meringueCounter,
-  "#Pie",
-  meringueButton
-);
-setupCounter(cakeIncrement, cakeDecrement, cakeCounter, "#Cake", cakeButton);
-setupCounter(
-  brownieIncrement,
-  brownieDecrement,
-  brownieCounter,
-  "#Brownie",
-  brownieButton
-);
-setupCounter(
-  pannaIncrement,
-  pannaDecrement,
-  pannaCounter,
-  "#Panna",
-  pannaButton
-);
 //Event listeners for Popup
 document.addEventListener("click", (evt) => {
   if (evt.target.classList.contains("popup")) {
