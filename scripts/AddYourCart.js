@@ -23,8 +23,20 @@ class AddYourCart {
     this._element.querySelector(".addedCart__total-price").textContent =
       this._price;
     this._element.querySelector(".addedCart__image").src = this._image;
-
+    this._element
+      .querySelector(".addedCart__remove")
+      .addEventListener("click", () => {
+        this._element.remove();
+      });
     return this._element;
+  }
+  setEventListeners() {
+    this._element
+      .querySelector(".addedCart__remove")
+      .addEventListener("click", function () {
+        console.log(this._element);
+        this._element.remove();
+      });
   }
 }
 

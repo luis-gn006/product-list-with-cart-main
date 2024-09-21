@@ -70,14 +70,12 @@ function setItemRemoveButton() {
   removeButtons.forEach((btn) =>
     btn.addEventListener("click", (evt) => {
       let id = evt.currentTarget.parentNode.parentNode.getAttribute("id");
-      let container = document.getElementById(id);
       let card = document.querySelector(`#product${id}`);
       let cardButton = card.querySelector(".add-to-cart");
       let cardCounter = card.querySelector(".add-to-cart__quantity");
       counter = counter - parseInt(cardCounter.textContent);
       cardCounter.textContent = 0;
       removeCart(cardButton);
-      container.remove();
       getEmptyCart();
       totalCart();
     })
@@ -247,7 +245,9 @@ confirmOrderButton.addEventListener("click", function () {
   document.querySelector(".popup").classList.add("popup__open");
   document.addEventListener("keydown", escClose);
   document.addEventListener("click", (evt) => {
-    clickOutClosePopup(evt);
+    if (evt.target.classList.contains("popup")) {
+      closePopup();
+    }
   });
 
   const allAddedCart = document.querySelectorAll(".addedCart");
@@ -275,11 +275,6 @@ function escClose(evt) {
     closePopup();
   }
   document.removeEventListener("keydown", escClose);
-}
-function clickOutClosePopup(evt) {
-  if (evt.target.classList.contains("popup")) {
-    closePopup();
-  }
 }
 
 //Start new order
